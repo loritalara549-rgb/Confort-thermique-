@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Évaluation du Confort Thermique</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <header class="header">
+            <div class="header-icon">☀️</div>
+
+            <div>
+                <h1>Évaluation du Confort Thermique</h1>
+                <p>par Logique Floue</p>
+            </div>
+        </header>
+
+
+        <!-- CONTENU PRINCIPAL -->
+        <main class="main-content">
+
+            <!-- PANNEAU GAUCHE -->
+            <section class="card input-card">
+
+                <h2>🌡️ Saisir les paramètres</h2>
+
+                <div class="input-group">
+                    <label for="temperature">
+                        Température (°C)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="temperature"
+                        min="0"
+                        max="40"
+                        placeholder="Ex : 25"
+                    >
+                </div>
+
+
+                <div class="input-group">
+                    <label for="humidite">
+                        Humidité (%)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="humidite"
+                        min="0"
+                        max="100"
+                        placeholder="Ex : 60"
+                    >
+                </div>
+
+
+                <button id="evaluer">
+                    🏠 Évaluer
+                </button>
+
+            </section>
+
+
+
+            <!-- PANNEAU DROIT -->
+            <section class="card result-card">
+
+                <!-- SCORE -->
+                <div class="score-card">
+
+                    <h2>😊 Score de confort</h2>
+
+                    <div class="score">
+                        <span id="score">--</span>
+                        <small>/ 100</small>
+                    </div>
+
+                    <div class="progress-container">
+                        <div id="progress-bar"></div>
+                    </div>
+
+                    <p id="interpretation">
+                        --
+                    </p>
+
+                </div>
+
+
+                <!-- DEGRÉS D'APPARTENANCE -->
+                <div class="membership-section">
+
+                    <h2>📊 Degrés d'appartenance</h2>
+
+                    <div class="membership-columns">
+
+                        <!-- TEMPÉRATURE -->
+                        <div class="membership-column">
+
+                            <h3>🌡️ Température</h3>
+
+                            <p>
+                                Froide :
+                                <span id="froide-result">--</span>
+                            </p>
+
+                            <div class="membership-bar">
+                                <div id="froide-bar"></div>
+                            </div>
+
+
+                            <p>
+                                Modérée :
+                                <span id="moderee-result">--</span>
+                            </p>
+
+                            <div class="membership-bar">
+                                <div id="moderee-bar"></div>
+                            </div>
+
+
+                            <p>
+                                Chaude :
+                                <span id="chaude-result">--</span>
+                            </p>
+
+                            <div class="membership-bar">
+                                <div id="chaude-bar"></div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- HUMIDITÉ -->
+                        <div class="membership-column">
+
+                            <h3>💧 Humidité</h3>
+
+                            <p>
+                                Faible :
+                                <span id="faible-result">--</span>
+                            </p>
+
+                            <div class="membership-bar">
+                                <div id="faible-bar"></div>
+                            </div>
+
+
+                            <p>
+                                Moyenne :
+                                <span id="moyenne-result">--</span>
+                            </p>
+
+                            <div class="membership-bar">
+                                <div id="moyenne-bar"></div>
+                            </div>
+
+
+                            <p>
+                                Élevée :
+                                <span id="elevee-result">--</span>
+                            </p>
+
+                            <div class="membership-bar">
+                                <div id="elevee-bar"></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONFORT THERMIQUE -->
+                <div class="comfort-section">
+
+                    <h2>🌿 Confort thermique</h2>
+
+                    <div class="comfort-results">
+
+                        <p>
+                            Mauvais :
+                            <span id="mauvais-result">--</span>
+                        </p>
+
+                        <p>
+                            Moyen :
+                            <span id="moyen-result">--</span>
+                        </p>
+
+                        <p>
+                            Bon :
+                            <span id="bon-result">--</span>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RECOMMANDATION -->
+                <div class="recommendation">
+
+                    <strong>ℹ️ Information</strong>
+
+                    <p id="recommendation-text">
+                        Entrez les paramètres puis cliquez sur
+                        « Évaluer » pour obtenir le niveau de confort thermique.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+    
+
+</body>
+
+</html>
