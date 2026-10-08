@@ -12,125 +12,727 @@
 
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <!-- HEADER -->
-        <header class="header">
-            <div class="header-icon">☀️</div>
+    <!-- ================= HEADER ================= -->
 
-            <div>
+    <header class="header">
+
+        <div class="header-left">
+
+            <div class="sun-icon">☀</div>
+
+            <div class="header-text">
                 <h1>Évaluation du Confort Thermique</h1>
                 <p>par Logique Floue</p>
             </div>
-        </header>
+
+        </div>
 
 
-        <!-- CONTENU PRINCIPAL -->
-        <main class="main-content">
+        <!-- Maison + thermomètre + feuille -->
 
-            <!-- PANNEAU GAUCHE -->
-            <section class="card input-card">
+        <div class="header-house">
 
-                <h2>🌡️ Saisir les paramètres</h2>
+            <svg viewBox="0 0 220 140" class="header-icon-svg">
 
-                <div class="input-group">
+                <!-- Maison -->
+
+                <path
+                    d="M35 70
+                       L105 15
+                       L145 48
+                       L145 30
+                       L170 30
+                       L170 68
+                       L185 80"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+
+                <path
+                    d="M43 67
+                       V112
+                       H100
+                       V78"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+
+
+                <!-- Thermomètre -->
+
+                <path
+                    d="M90 52
+                       C82 52 77 58 77 66
+                       V92
+                       C71 97 68 104 68 110
+                       C68 122 78 131 90 131
+                       C102 131 112 122 112 110
+                       C112 103 109 97 103 92
+                       V66
+                       C103 58 98 52 90 52Z"
+                    fill="white"
+                    stroke="white"
+                    stroke-width="4"
+                />
+
+                <line
+                    x1="90"
+                    y1="68"
+                    x2="90"
+                    y2="111"
+                    stroke="#ef3348"
+                    stroke-width="8"
+                    stroke-linecap="round"
+                />
+
+                <circle
+                    cx="90"
+                    cy="111"
+                    r="11"
+                    fill="#ef3348"
+                />
+
+
+                <!-- Graduations -->
+
+                <line
+                    x1="110"
+                    y1="70"
+                    x2="122"
+                    y2="70"
+                    stroke="white"
+                    stroke-width="5"
+                    stroke-linecap="round"
+                />
+
+                <line
+                    x1="110"
+                    y1="84"
+                    x2="119"
+                    y2="84"
+                    stroke="white"
+                    stroke-width="5"
+                    stroke-linecap="round"
+                />
+
+                <line
+                    x1="110"
+                    y1="98"
+                    x2="122"
+                    y2="98"
+                    stroke="white"
+                    stroke-width="5"
+                    stroke-linecap="round"
+                />
+
+
+                <!-- Feuille -->
+
+                <path
+                    d="M132 112
+                       C137 78 164 58 198 60
+                       C196 91 175 117 139 121"
+                    fill="#35c936"
+                    stroke="#d9ef00"
+                    stroke-width="5"
+                    stroke-linejoin="round"
+                />
+
+                <path
+                    d="M139 116
+                       C157 98 174 81 190 66"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                />
+
+            </svg>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= CONTENU PRINCIPAL ================= -->
+
+    <main class="main-content">
+
+
+        <!-- ================= COLONNE GAUCHE ================= -->
+
+        <section class="left-column">
+
+
+            <!-- PARAMÈTRES -->
+
+            <div class="card parameter-card">
+
+                <h2>
+                    <span class="gear-icon">⚙</span>
+                    Saisir les paramètres
+                </h2>
+
+
+                <!-- Température -->
+
+                <div class="input-box">
+
                     <label for="temperature">
+
+                        <span class="thermometer-icon">
+
+                            <svg viewBox="0 0 40 64">
+
+                                <path
+                                    d="M20 4
+                                       C14 4 10 8 10 14
+                                       V38
+                                       C6 41 4 45 4 50
+                                       C4 58 11 64 20 64
+                                       C29 64 36 58 36 50
+                                       C36 45 34 41 30 38
+                                       V14
+                                       C30 8 26 4 20 4Z"
+                                    fill="white"
+                                    stroke="#173f78"
+                                    stroke-width="4"
+                                />
+
+                                <line
+                                    x1="20"
+                                    y1="16"
+                                    x2="20"
+                                    y2="50"
+                                    stroke="#ed3347"
+                                    stroke-width="5"
+                                    stroke-linecap="round"
+                                />
+
+                                <circle
+                                    cx="20"
+                                    cy="51"
+                                    r="8"
+                                    fill="#ed3347"
+                                />
+
+                            </svg>
+
+                        </span>
+
                         Température (°C)
+
                     </label>
+
 
                     <input
                         type="number"
                         id="temperature"
                         min="0"
                         max="40"
-                        placeholder="Ex : 25"
+                        value="25"
                     >
+
                 </div>
 
 
-                <div class="input-group">
+                <!-- Humidité -->
+
+                <div class="input-box">
+
                     <label for="humidite">
+
+                        <span class="drop-icon">
+
+                            <svg viewBox="0 0 40 50">
+
+                                <path
+                                    d="M20 3
+                                       C20 3 5 22 5 31
+                                       C5 40 11 47 20 47
+                                       C29 47 35 40 35 31
+                                       C35 22 20 3 20 3Z"
+                                    fill="#13afe9"
+                                    stroke="#173f78"
+                                    stroke-width="3"
+                                />
+
+                                <path
+                                    d="M13 33
+                                       C13 37 16 40 20 40"
+                                    fill="none"
+                                    stroke="white"
+                                    stroke-width="3"
+                                    stroke-linecap="round"
+                                />
+
+                            </svg>
+
+                        </span>
+
                         Humidité (%)
+
                     </label>
+
 
                     <input
                         type="number"
                         id="humidite"
                         min="0"
                         max="100"
-                        placeholder="Ex : 60"
+                        value="50"
                     >
+
                 </div>
 
+
+                <!-- Bouton -->
 
                 <button id="evaluer">
-                    🏠 Évaluer
+
+                    <span class="calculator-icon">
+
+                        <svg viewBox="0 0 40 48">
+
+                            <rect
+                                x="5"
+                                y="3"
+                                width="30"
+                                height="42"
+                                rx="5"
+                                fill="none"
+                                stroke="white"
+                                stroke-width="4"
+                            />
+
+                            <line
+                                x1="10"
+                                y1="15"
+                                x2="30"
+                                y2="15"
+                                stroke="white"
+                                stroke-width="3"
+                            />
+
+                            <circle cx="12" cy="23" r="2.2" fill="white"/>
+                            <circle cx="20" cy="23" r="2.2" fill="white"/>
+                            <circle cx="28" cy="23" r="2.2" fill="white"/>
+
+                            <circle cx="12" cy="31" r="2.2" fill="white"/>
+                            <circle cx="20" cy="31" r="2.2" fill="white"/>
+                            <circle cx="28" cy="31" r="2.2" fill="white"/>
+
+                            <circle cx="12" cy="39" r="2.2" fill="white"/>
+                            <circle cx="20" cy="39" r="2.2" fill="white"/>
+                            <circle cx="28" cy="39" r="2.2" fill="white"/>
+
+                        </svg>
+
+                    </span>
+
+                    Évaluer
+
                 </button>
 
-            </section>
+            </div>
 
 
+            <!-- ================= ILLUSTRATION ================= -->
 
-            <!-- PANNEAU DROIT -->
-            <section class="card result-card">
+            <div class="card illustration-card">
 
-                <!-- SCORE -->
-                <div class="score-card">
+                <div class="illustration">
 
-                    <h2>😊 Score de confort</h2>
+                    <svg
+                        viewBox="0 0 420 360"
+                        class="comfort-svg"
+                    >
 
-                    <div class="score">
-                        <span id="score">--</span>
-                        <small>/ 100</small>
-                    </div>
+                        <!-- Arcs -->
 
-                    <div class="progress-container">
-                        <div id="progress-bar"></div>
-                    </div>
+                        <path
+                            d="M75 245
+                               C35 190 42 125 85 78"
+                            fill="none"
+                            stroke="#8bd35b"
+                            stroke-width="4"
+                            stroke-linecap="round"
+                        />
 
-                    <p id="interpretation">
-                        --
-                    </p>
+                        <path
+                            d="M285 65
+                               C330 85 357 125 365 170"
+                            fill="none"
+                            stroke="#39bdd9"
+                            stroke-width="4"
+                            stroke-linecap="round"
+                        />
+
+                        <path
+                            d="M175 310
+                               C230 325 285 305 318 265"
+                            fill="none"
+                            stroke="#159b45"
+                            stroke-width="5"
+                            stroke-linecap="round"
+                        />
+
+
+                        <!-- Maison -->
+
+                        <path
+                            d="M95 145
+                               L205 52
+                               L315 145"
+                            fill="none"
+                            stroke="#173f78"
+                            stroke-width="8"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+
+                        <path
+                            d="M117 130
+                               V220
+                               H293
+                               V130"
+                            fill="none"
+                            stroke="#173f78"
+                            stroke-width="8"
+                            stroke-linejoin="round"
+                        />
+
+
+                        <!-- Thermomètre -->
+
+                        <path
+                            d="M160 126
+                               C151 126 145 133 145 142
+                               V215
+                               C136 222 131 232 131 243
+                               C131 261 145 275 163 275
+                               C181 275 195 261 195 243
+                               C195 232 190 222 181 215
+                               V142
+                               C181 133 175 126 166 126Z"
+                            fill="white"
+                            stroke="#173f78"
+                            stroke-width="7"
+                            stroke-linejoin="round"
+                        />
+
+                        <line
+                            x1="163"
+                            y1="145"
+                            x2="163"
+                            y2="244"
+                            stroke="#ed3347"
+                            stroke-width="10"
+                            stroke-linecap="round"
+                        />
+
+                        <circle
+                            cx="163"
+                            cy="244"
+                            r="17"
+                            fill="#ed3347"
+                        />
+
+
+                        <!-- Graduations -->
+
+                        <line
+                            x1="184"
+                            y1="160"
+                            x2="198"
+                            y2="160"
+                            stroke="#173f78"
+                            stroke-width="4"
+                            stroke-linecap="round"
+                        />
+
+                        <line
+                            x1="184"
+                            y1="178"
+                            x2="194"
+                            y2="178"
+                            stroke="#173f78"
+                            stroke-width="4"
+                            stroke-linecap="round"
+                        />
+
+                        <line
+                            x1="184"
+                            y1="196"
+                            x2="198"
+                            y2="196"
+                            stroke="#173f78"
+                            stroke-width="4"
+                            stroke-linecap="round"
+                        />
+
+
+                        <!-- Goutte -->
+
+                        <path
+                            d="M245 125
+                               C245 125 215 165 215 182
+                               C215 199 228 211 245 211
+                               C262 211 275 199 275 182
+                               C275 165 245 125 245 125Z"
+                            fill="#14afe9"
+                            stroke="#173f78"
+                            stroke-width="6"
+                        />
+
+                        <path
+                            d="M230 184
+                               C230 191 235 196 240 198"
+                            fill="none"
+                            stroke="white"
+                            stroke-width="4"
+                            stroke-linecap="round"
+                        />
+
+
+                        <!-- Feuille -->
+
+                        <path
+                            d="M290 250
+                               C306 204 344 190 369 194
+                               C364 230 337 267 294 273"
+                            fill="#45c236"
+                            stroke="#173f78"
+                            stroke-width="5"
+                        />
+
+                        <path
+                            d="M299 263
+                               C320 239 342 215 361 201"
+                            fill="none"
+                            stroke="white"
+                            stroke-width="4"
+                            stroke-linecap="round"
+                        />
+
+                    </svg>
 
                 </div>
 
 
-                <!-- DEGRÉS D'APPARTENANCE -->
-                <div class="membership-section">
+                <p>
+                    Un meilleur confort,<br>
+                    pour un quotidien plus sain
+                </p>
 
-                    <h2>📊 Degrés d'appartenance</h2>
+            </div>
 
-                    <div class="membership-columns">
+        </section>
 
-                        <!-- TEMPÉRATURE -->
-                        <div class="membership-column">
 
-                            <h3>🌡️ Température</h3>
 
-                            <p>
-                                Froide :
-                                <span id="froide-result">--</span>
-                            </p>
+        <!-- ================= COLONNE DROITE ================= -->
+
+        <section class="right-column">
+
+
+            <!-- ================= SCORE ================= -->
+
+            <div class="score-card">
+
+                <div class="score-title">
+
+                    <div class="score-title-left">
+
+                        <span class="smile-icon">
+                            😊
+                        </span>
+
+                        <h2>
+                            Score de confort
+                        </h2>
+
+                    </div>
+
+
+                    <!-- Deux feuilles -->
+
+                    <span class="leaf-decoration">
+
+                        <svg viewBox="0 0 100 80">
+
+                            <path
+                                d="M43 70
+                                   C18 65 7 45 12 15
+                                   C39 17 54 35 43 70Z"
+                                fill="#8bdc68"
+                            />
+
+                            <path
+                                d="M48 69
+                                   C48 35 66 10 92 7
+                                   C95 37 80 61 48 69Z"
+                                fill="#71d452"
+                            />
+
+                            <path
+                                d="M51 65
+                                   C64 47 76 29 87 13"
+                                fill="none"
+                                stroke="white"
+                                stroke-width="3"
+                                stroke-linecap="round"
+                            />
+
+                        </svg>
+
+                    </span>
+
+                </div>
+
+
+                <div class="score">
+
+                    <span id="score">
+                        80
+                    </span>
+
+                    <small>
+                        / 100
+                    </small>
+
+                </div>
+
+
+                <div class="progress-container">
+
+                    <div id="progress-bar"></div>
+
+                </div>
+
+
+                <div
+                    class="status"
+                    id="interpretation"
+                >
+                    Confort élevé
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= DEGRÉS ================= -->
+
+            <div class="membership-section">
+
+                <h2>
+
+                    <span class="chart-icon">
+                        ▥
+                    </span>
+
+                    Degrés d'appartenance
+
+                </h2>
+
+
+                <div class="membership-columns">
+
+
+                    <!-- Température -->
+
+                    <div class="membership-column temperature">
+
+                        <h3>
+
+                            <span class="small-thermometer">
+
+                                <svg viewBox="0 0 40 64">
+
+                                    <path
+                                        d="M20 4
+                                           C14 4 10 8 10 14
+                                           V38
+                                           C6 41 4 45 4 50
+                                           C4 58 11 64 20 64
+                                           C29 64 36 58 36 50
+                                           C36 45 34 41 30 38
+                                           V14
+                                           C30 8 26 4 20 4Z"
+                                        fill="white"
+                                        stroke="#173f78"
+                                        stroke-width="4"
+                                    />
+
+                                    <line
+                                        x1="20"
+                                        y1="16"
+                                        x2="20"
+                                        y2="50"
+                                        stroke="#ed3347"
+                                        stroke-width="5"
+                                        stroke-linecap="round"
+                                    />
+
+                                    <circle
+                                        cx="20"
+                                        cy="51"
+                                        r="8"
+                                        fill="#ed3347"
+                                    />
+
+                                </svg>
+
+                            </span>
+
+                            Température
+
+                        </h3>
+
+
+                        <div class="membership-item">
+
+                            <div class="membership-label">
+                                <span>Froide :</span>
+                                <strong id="froide-result">0.00</strong>
+                            </div>
 
                             <div class="membership-bar">
                                 <div id="froide-bar"></div>
                             </div>
 
+                        </div>
 
-                            <p>
-                                Modérée :
-                                <span id="moderee-result">--</span>
-                            </p>
+
+                        <div class="membership-item">
+
+                            <div class="membership-label">
+                                <span>Modérée :</span>
+                                <strong id="moderee-result">0.67</strong>
+                            </div>
 
                             <div class="membership-bar">
                                 <div id="moderee-bar"></div>
                             </div>
 
+                        </div>
 
-                            <p>
-                                Chaude :
-                                <span id="chaude-result">--</span>
-                            </p>
+
+                        <div class="membership-item">
+
+                            <div class="membership-label">
+                                <span>Chaude :</span>
+                                <strong id="chaude-result">0.00</strong>
+                            </div>
 
                             <div class="membership-bar">
                                 <div id="chaude-bar"></div>
@@ -138,36 +740,59 @@
 
                         </div>
 
+                    </div>
 
-                        <!-- HUMIDITÉ -->
-                        <div class="membership-column">
 
-                            <h3>💧 Humidité</h3>
 
-                            <p>
-                                Faible :
-                                <span id="faible-result">--</span>
-                            </p>
+                    <!-- Humidité -->
+
+                    <div class="membership-column humidity">
+
+                        <h3>
+
+                            <span class="small-drop">
+                                💧
+                            </span>
+
+                            Humidité
+
+                        </h3>
+
+
+                        <div class="membership-item">
+
+                            <div class="membership-label">
+                                <span>Faible :</span>
+                                <strong id="faible-result">0.00</strong>
+                            </div>
 
                             <div class="membership-bar">
                                 <div id="faible-bar"></div>
                             </div>
 
+                        </div>
 
-                            <p>
-                                Moyenne :
-                                <span id="moyenne-result">--</span>
-                            </p>
+
+                        <div class="membership-item">
+
+                            <div class="membership-label">
+                                <span>Moyenne :</span>
+                                <strong id="moyenne-result">1.00</strong>
+                            </div>
 
                             <div class="membership-bar">
                                 <div id="moyenne-bar"></div>
                             </div>
 
+                        </div>
 
-                            <p>
-                                Élevée :
-                                <span id="elevee-result">--</span>
-                            </p>
+
+                        <div class="membership-item">
+
+                            <div class="membership-label">
+                                <span>Élevée :</span>
+                                <strong id="elevee-result">0.00</strong>
+                            </div>
 
                             <div class="membership-bar">
                                 <div id="elevee-bar"></div>
@@ -179,56 +804,105 @@
 
                 </div>
 
+            </div>
 
-                <!-- CONFORT THERMIQUE -->
-                <div class="comfort-section">
 
-                    <h2>🌿 Confort thermique</h2>
 
-                    <div class="comfort-results">
+            <!-- ================= CONFORT ================= -->
 
-                        <p>
+            <div class="comfort-section">
+
+                <h2>
+
+                    <span class="leaf-title">
+                        🌿
+                    </span>
+
+                    Confort thermique
+
+                </h2>
+
+
+                <div class="comfort-results">
+
+                    <div class="comfort-box mauvais">
+
+                        <span>
                             Mauvais :
-                            <span id="mauvais-result">--</span>
-                        </p>
+                        </span>
 
-                        <p>
+                        <strong id="mauvais-result">
+                            0.00
+                        </strong>
+
+                    </div>
+
+
+                    <div class="comfort-box moyen">
+
+                        <span>
                             Moyen :
-                            <span id="moyen-result">--</span>
-                        </p>
+                        </span>
 
-                        <p>
+                        <strong id="moyen-result">
+                            0.00
+                        </strong>
+
+                    </div>
+
+
+                    <div class="comfort-box bon">
+
+                        <span>
                             Bon :
-                            <span id="bon-result">--</span>
-                        </p>
+                        </span>
+
+                        <strong id="bon-result">
+                            0.67
+                        </strong>
 
                     </div>
 
                 </div>
 
+            </div>
 
-                <!-- RECOMMANDATION -->
-                <div class="recommendation">
 
-                    <strong>ℹ️ Information</strong>
+
+            <!-- ================= INFORMATION ================= -->
+
+            <div class="information">
+
+                <div class="info-icon">
+                    i
+                </div>
+
+                <div class="information-content">
+
+                    <strong>
+                        Information
+                    </strong>
 
                     <p id="recommendation-text">
-                        Entrez les paramètres puis cliquez sur
-                        « Évaluer » pour obtenir le niveau de confort thermique.
+
+                        Le niveau de confort est élevé.
+                        La température et l'humidité sont favorables
+                        à de bonnes conditions de confort.
+
                     </p>
 
                 </div>
 
-            </section>
+            </div>
 
-        </main>
+        </section>
 
-    </div>
+    </main>
+
+</div>
 
 
-    <script src="script.js"></script>
-    
+<script src="script.js"></script>
 
 </body>
-
 </html>
