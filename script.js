@@ -71,22 +71,28 @@ evaluerButton.addEventListener("click", function () {
     // 2. REGLES FLOUES
     // =========================
 
-    const regle1 = froide;
-    const regle2 = Math.min(moderee, moyenne);
-    const regle3 = Math.min(chaude, elevee);
+   
+const regle1 = Math.min(froide, faible);
+const regle2 = Math.min(froide, moyenne);
+const regle3 = Math.min(froide, elevee);
 
-    const regle4 = Math.min(moderee, faible);
-    const regle5 = Math.min(moderee, elevee);
-    const regle6 = Math.min(chaude, moyenne);
+const regle4 = Math.min(moderee, faible);
+const regle5 = Math.min(moderee, moyenne);
+const regle6 = Math.min(moderee, elevee);
 
-    // =========================
-    // 3. AGREGATION
-    // =========================
+const regle7 = Math.min(chaude, faible);
+const regle8 = Math.min(chaude, moyenne);
+const regle9 = Math.min(chaude, elevee);
 
-    const mauvais = Math.max(regle1, regle3);
-    const moyen = Math.max(regle4, regle5, regle6);
-    const bon = regle2;
+// Agrégation des règles
+const mauvais = Math.max(
+    regle1, regle2, regle3,
+    regle7, regle8, regle9
+);
 
+const moyen = Math.max(regle4, regle6);
+
+const bon = regle5;
     // =========================
     // 4. DEFUZZIFICATION
     // =========================
