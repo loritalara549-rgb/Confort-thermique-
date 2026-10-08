@@ -1,318 +1,1249 @@
+/* =========================================================
+   RESET
+========================================================= */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+
+/* =========================================================
+   BODY
+========================================================= */
+
 body {
-    font-family: Arial, sans-serif;
-    background: #eef4f8;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f6fa;
+    color: #12386b;
     min-height: 100vh;
-    padding: 30px;
-    color: #2c3e50;
 }
 
-/* ================= HEADER ================= */
+
+/* =========================================================
+   CONTAINER
+========================================================= */
 
 .container {
-    max-width: 1100px;
-    margin: auto;
+    width: 97%;
+    max-width: 1500px;
+    margin: 18px auto;
 }
+
+
+/* =========================================================
+   HEADER
+========================================================= */
 
 .header {
-    background: linear-gradient(135deg, #164e70, #3498db);
-    color: white;
-    padding: 30px;
+    height: 150px;
+
+    background:
+        linear-gradient(
+            110deg,
+            #087bea,
+            #009eea
+        );
+
     border-radius: 18px;
+
     display: flex;
     align-items: center;
-    gap: 20px;
-    margin-bottom: 25px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-}
-
-.header-icon {
-    font-size: 45px;
-}
-
-.header h1 {
-    font-size: 30px;
-    margin-bottom: 7px;
-}
-
-.header p {
-    font-size: 17px;
-    opacity: 0.9;
-}
-
-
-/* ================= MAIN CONTENT ================= */
-
-.main-content {
-    display: grid;
-    grid-template-columns: 350px 1fr;
-    gap: 25px;
-}
-
-
-/* ================= CARDS ================= */
-
-.card {
-    background: white;
-    border-radius: 18px;
-    padding: 25px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-}
-
-.card h2 {
-    font-size: 20px;
-    margin-bottom: 25px;
-}
-
-
-/* ================= INPUT ================= */
-
-.input-group {
-    margin-bottom: 20px;
-}
-
-.input-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-
-.input-group input {
-    width: 100%;
-    padding: 13px;
-    border: 1px solid #ccd6dd;
-    border-radius: 9px;
-    font-size: 16px;
-    outline: none;
-}
-
-.input-group input:focus {
-    border-color: #3498db;
-}
-
-
-button {
-    width: 100%;
-    padding: 14px;
-    border: none;
-    border-radius: 10px;
-    background: #3498db;
-    color: white;
-    font-size: 17px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-button:hover {
-    background: #2980b9;
-}
-
-
-/* ================= SCORE ================= */
-
-.score-card {
-    background: #e8f7ee;
-    border-radius: 15px;
-    padding: 22px;
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-.score-card h2 {
-    margin-bottom: 15px;
-}
-
-.score {
-    font-size: 42px;
-    font-weight: bold;
-    color: #218c54;
-    margin-bottom: 15px;
-}
-
-.score small {
-    font-size: 20px;
-    color: #555;
-}
-
-
-/* ================= PROGRESS BAR ================= */
-
-.progress-container {
-    width: 100%;
-    height: 18px;
-    background: #dce4e8;
-    border-radius: 20px;
-    overflow: hidden;
-    margin-bottom: 12px;
-}
-
-#progress-bar {
-    width: 0%;
-    height: 100%;
-    background: #2eaf68;
-    border-radius: 20px;
-    transition: width 0.5s ease;
-}
-
-#interpretation {
-    font-weight: bold;
-    color: #218c54;
-}
-
-
-/* ================= MEMBERSHIP ================= */
-
-.membership-section {
-    margin-top: 10px;
-}
-
-.membership-section h2 {
-    margin-bottom: 20px;
-}
-
-.membership-columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-}
-
-.membership-column {
-    background: #f7f9fa;
-    padding: 18px;
-    border-radius: 12px;
-}
-
-.membership-column h3 {
-    margin-bottom: 18px;
-    font-size: 17px;
-}
-
-.membership-column p {
-    display: flex;
     justify-content: space-between;
-    margin-top: 12px;
-    font-size: 14px;
-}
 
-.membership-column span {
-    font-weight: bold;
-}
+    padding: 18px 35px;
 
+    color: white;
 
-/* ================= MEMBERSHIP BARS ================= */
+    margin-bottom: 20px;
 
-.membership-bar {
-    width: 100%;
-    height: 8px;
-    background: #dfe5e8;
-    border-radius: 10px;
     overflow: hidden;
-    margin-top: 6px;
-}
 
-.membership-bar div {
-    width: 0%;
-    height: 100%;
-    background: #3498db;
-    border-radius: 10px;
-    transition: width 0.4s ease;
+    position: relative;
+
+    box-shadow:
+        0 4px 12px rgba(30, 100, 160, 0.12);
 }
 
 
-/* ================= COMFORT ================= */
+.header::after {
+    content: "";
 
-.comfort-section {
-    margin-top: 25px;
-    padding-top: 20px;
-    border-top: 1px solid #e1e6e9;
+    position: absolute;
+
+    width: 600px;
+    height: 120px;
+
+    right: 80px;
+    bottom: -85px;
+
+    background: rgba(255,255,255,0.08);
+
+    border-radius: 50%;
 }
 
-.comfort-results {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+
+.header-left {
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    position: relative;
+    z-index: 2;
 }
 
-.comfort-results p {
-    background: #f7f9fa;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 14px;
+
+.sun-icon {
+    font-size: 75px;
+
+    color: #ffd928;
+
+    text-shadow:
+        2px 2px 0 #173b70,
+        -2px -2px 0 #173b70,
+        2px -2px 0 #173b70,
+        -2px 2px 0 #173b70;
 }
 
-.comfort-results span {
-    display: block;
-    font-size: 20px;
-    font-weight: bold;
+
+.header-text h1 {
+    font-size: 42px;
+
+    line-height: 1.1;
+
+    font-weight: 800;
+
+    letter-spacing: -1px;
+}
+
+
+.header-text p {
+    font-size: 24px;
+
+    font-weight: 600;
+
     margin-top: 7px;
 }
 
 
-/* ================= RECOMMENDATION ================= */
+/* =========================================================
+   HEADER ICON
+========================================================= */
 
-.recommendation {
-    margin-top: 25px;
-    padding: 18px;
-    background: #eaf5ff;
-    border-left: 5px solid #3498db;
-    border-radius: 10px;
+.header-house {
+    width: 220px;
+    height: 140px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    z-index: 2;
 }
 
-.recommendation strong {
+
+.header-icon-svg {
+    width: 220px;
+    height: 140px;
+
     display: block;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.main-content {
+
+    display: grid;
+
+    grid-template-columns: 39% 61%;
+
+    gap: 18px;
+
+    align-items: stretch;
+}
+
+
+.left-column,
+.right-column {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.card {
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 3px 14px rgba(32,79,115,0.10);
+}
+
+
+/* =========================================================
+   PARAMETER CARD
+========================================================= */
+
+.parameter-card {
+
+    padding: 25px 23px 24px;
+}
+
+
+.parameter-card h2 {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 27px;
+
+    margin-bottom: 20px;
+
+    color: #123b72;
+}
+
+
+.gear-icon {
+
+    font-size: 38px;
+
+    color: #087de8;
+}
+
+
+/* =========================================================
+   INPUT BOX
+========================================================= */
+
+.input-box {
+
+    background: #ffffff;
+
+    border: 1px solid #dce8f0;
+
+    border-radius: 16px;
+
+    padding: 17px 20px 20px;
+
+    margin-bottom: 18px;
+
+    box-shadow:
+        0 2px 7px rgba(50,100,140,0.07);
+}
+
+
+.input-box label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    margin-bottom: 12px;
+
+    color: #123b72;
+}
+
+
+/* =========================================================
+   THERMOMETER
+========================================================= */
+
+.thermometer-icon {
+
+    width: 32px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+
+.thermometer-icon svg {
+
+    width: 28px;
+    height: 46px;
+
+    display: block;
+}
+
+
+/* =========================================================
+   DROP
+========================================================= */
+
+.drop-icon {
+
+    width: 32px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+
+.drop-icon svg {
+
+    width: 29px;
+    height: 40px;
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.input-box input {
+
+    width: 100%;
+
+    height: 59px;
+
+    border: 2px solid #d7e3eb;
+
+    border-radius: 13px;
+
+    padding: 8px 17px;
+
+    font-size: 25px;
+
+    color: #172c55;
+
+    outline: none;
+
+    background: #fff;
+}
+
+
+.input-box input:focus {
+
+    border-color: #1595ed;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+#evaluer {
+
+    width: 100%;
+
+    height: 72px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            100deg,
+            #087bea,
+            #05a4ed
+        );
+
+    color: white;
+
+    font-size: 27px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    margin-top: 3px;
+
+    transition: 0.2s;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+}
+
+
+#evaluer:hover {
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 12px rgba(0,130,230,0.22);
+}
+
+
+/* =========================================================
+   CALCULATOR
+========================================================= */
+
+.calculator-icon {
+
+    width: 34px;
+    height: 43px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+.calculator-icon svg {
+
+    width: 32px;
+    height: 40px;
+}
+
+
+/* =========================================================
+   ILLUSTRATION
+========================================================= */
+
+.illustration-card {
+
+    flex: 1;
+
+    min-height: 520px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #ffffff 0%,
+            #ffffff 72%,
+            #eef9ff 100%
+        );
+}
+
+
+.illustration-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: -70px;
+
+    left: -10%;
+
+    width: 120%;
+
+    height: 150px;
+
+    background: #dff4ff;
+
+    border-radius:
+        50% 50% 0 0 /
+        35% 35% 0 0;
+
+    opacity: 0.75;
+}
+
+
+.illustration {
+
+    width: 420px;
+    height: 360px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.comfort-svg {
+
+    width: 420px;
+    height: 360px;
+}
+
+
+.illustration-card p {
+
+    color: #174c91;
+
+    font-size: 27px;
+
+    line-height: 1.4;
+
+    text-align: center;
+
+    font-style: italic;
+
+    margin-top: 5px;
+
+    position: relative;
+
+    z-index: 3;
+}
+
+
+/* =========================================================
+   SCORE
+========================================================= */
+
+.score-card {
+
+    background: #eafbf2;
+
+    border-radius: 20px;
+
+    padding: 19px 27px 18px;
+
+    min-height: 290px;
+
+    position: relative;
+}
+
+
+.score-title {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.score-title-left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.smile-icon {
+
+    font-size: 46px;
+}
+
+
+.score-title h2 {
+
+    font-size: 29px;
+
+    color: #123b72;
+}
+
+
+/* =========================================================
+   FEUILLES DU SCORE
+========================================================= */
+
+.leaf-decoration {
+
+    width: 100px;
+    height: 80px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    opacity: 1;
+}
+
+
+.leaf-decoration svg {
+
+    width: 95px;
+    height: 75px;
+
+    display: block;
+}
+
+
+/* =========================================================
+   SCORE NUMBER
+========================================================= */
+
+.score {
+
+    text-align: center;
+
+    margin: 8px 0 10px;
+}
+
+
+.score span {
+
+    font-size: 72px;
+
+    font-weight: 800;
+
+    color: #07933e;
+}
+
+
+.score small {
+
+    font-size: 39px;
+
+    font-weight: 700;
+
+    color: #17203b;
+}
+
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.progress-container {
+
+    width: 100%;
+
+    height: 25px;
+
+    background: #dce6ef;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+
+#progress-bar {
+
+    width: 80%;
+
+    height: 100%;
+
+    background: #05a849;
+
+    border-radius: 20px;
+
+    transition: width 0.5s ease;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.status {
+
+    width: 280px;
+
+    margin: 15px auto 0;
+
+    padding: 7px 15px;
+
+    background: #d6f4d8;
+
+    color: #146c2d;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    font-size: 21px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   MEMBERSHIP
+========================================================= */
+
+.membership-section {
+
+    padding: 4px 2px 0;
+}
+
+
+.membership-section h2 {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    font-size: 29px;
+
+    margin-bottom: 15px;
+
+    color: #123b72;
+}
+
+
+.chart-icon {
+
+    font-size: 43px;
+
+    color: #087fe8;
+}
+
+
+.membership-columns {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+
+.membership-column {
+
+    border-radius: 16px;
+
+    padding: 18px 23px;
+}
+
+
+.membership-column.temperature {
+
+    background: #fff3f0;
+}
+
+
+.membership-column.humidity {
+
+    background: #eef8ff;
+}
+
+
+/* =========================================================
+   MEMBERSHIP TITLE
+========================================================= */
+
+.membership-column h3 {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 23px;
+
+    margin-bottom: 18px;
+
+    color: #123b72;
+}
+
+
+.small-thermometer {
+
+    width: 30px;
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+.small-thermometer svg {
+
+    width: 25px;
+    height: 39px;
+}
+
+
+.small-drop {
+
+    font-size: 32px;
+}
+
+
+/* =========================================================
+   MEMBERSHIP ITEMS
+========================================================= */
+
+.membership-item {
+
+    margin-bottom: 15px;
+}
+
+
+.membership-item:last-child {
+
+    margin-bottom: 0;
+}
+
+
+.membership-label {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    font-size: 19px;
+
     margin-bottom: 8px;
-    color: #2474a8;
-}
 
-.recommendation p {
-    line-height: 1.5;
-    font-size: 14px;
+    color: #182b4b;
 }
 
 
-/* ================= RESPONSIVE ================= */
+.membership-label strong {
 
-@media (max-width: 800px) {
+    font-size: 19px;
+
+    color: #123b72;
+}
+
+
+.membership-bar {
+
+    width: 100%;
+
+    height: 15px;
+
+    background: #dce5ed;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+
+.membership-bar div {
+
+    width: 0%;
+
+    height: 100%;
+
+    background: #1497e9;
+
+    border-radius: 20px;
+
+    transition: width 0.4s ease;
+}
+
+
+/* =========================================================
+   CONFORT THERMIQUE
+========================================================= */
+
+.comfort-section {
+
+    border-top: 2px solid #e6edf2;
+
+    padding-top: 14px;
+}
+
+
+.comfort-section h2 {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 28px;
+
+    margin-bottom: 14px;
+
+    color: #123b72;
+}
+
+
+.leaf-title {
+
+    font-size: 38px;
+}
+
+
+.comfort-results {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 14px;
+}
+
+
+.comfort-box {
+
+    min-height: 108px;
+
+    border-radius: 15px;
+
+    padding: 14px 15px;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.comfort-box span {
+
+    display: block;
+
+    font-size: 18px;
+
+    margin-bottom: 7px;
+}
+
+
+.comfort-box strong {
+
+    display: block;
+
+    font-size: 29px;
+}
+
+
+/* =========================================================
+   COLORS
+========================================================= */
+
+.mauvais {
+
+    background: #fff0f0;
+
+    color: #b72d39;
+}
+
+
+.moyen {
+
+    background: #fff8e7;
+
+    color: #9a650d;
+}
+
+
+.bon {
+
+    background: #e9faef;
+
+    color: #147d31;
+}
+
+
+/* =========================================================
+   COMFORT BARS
+========================================================= */
+
+.mauvais::after,
+.moyen::after,
+.bon::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 10px;
+
+    left: 15px;
+
+    right: 15px;
+
+    height: 11px;
+
+    border-radius: 20px;
+}
+
+
+.mauvais::after {
+
+    background: #f9cdd1;
+}
+
+
+.moyen::after {
+
+    background: #ffe39a;
+}
+
+
+.bon::after {
+
+    background: #bdebc8;
+}
+
+
+.bon::before {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 10px;
+
+    left: 15px;
+
+    width: 67%;
+
+    height: 11px;
+
+    border-radius: 20px;
+
+    background: #08a84a;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   INFORMATION
+   كبيرة وواضحة بحال الصورة
+========================================================= */
+
+.information {
+
+    width: 100%;
+
+    min-height: 165px;
+
+    background: #eef8ff;
+
+    border-left: 6px solid #168ee8;
+
+    border-radius: 0 16px 16px 16px;
+
+    padding: 25px 32px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    box-shadow:
+        0 3px 12px rgba(30,100,150,0.08);
+}
+
+
+/* Icon i */
+
+.info-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    min-width: 42px;
+
+    background: #315bb5;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 27px;
+
+    font-weight: bold;
+
+    font-family: Arial, sans-serif;
+
+    border-radius: 2px;
+}
+
+
+/* Contenu */
+
+.information-content {
+
+    flex: 1;
+}
+
+
+/* Titre Information */
+
+.information-content strong {
+
+    display: block;
+
+    font-size: 30px;
+
+    line-height: 1.2;
+
+    color: #173f78;
+
+    font-weight: 800;
+
+    margin-bottom: 14px;
+}
+
+
+/* Texte */
+
+.information-content p {
+
+    color: #274c78;
+
+    font-size: 22px;
+
+    line-height: 1.55;
+
+    font-weight: 400;
+
+    margin: 0;
+
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .header-text h1 {
+        font-size: 34px;
+    }
 
     .main-content {
         grid-template-columns: 1fr;
     }
 
-    .membership-columns {
-        grid-template-columns: 1fr;
+    .illustration-card {
+        min-height: 480px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .container {
+        width: 94%;
+        margin: 12px auto;
     }
 
+    .header {
+        height: auto;
+        min-height: 125px;
+        padding: 18px;
+    }
+
+    .sun-icon {
+        font-size: 50px;
+    }
+
+    .header-left {
+        gap: 12px;
+    }
+
+    .header-text h1 {
+        font-size: 24px;
+    }
+
+    .header-text p {
+        font-size: 16px;
+    }
+
+    .header-house {
+        display: none;
+    }
+
+    .membership-columns,
     .comfort-results {
         grid-template-columns: 1fr;
     }
 
-    .header h1 {
-        font-size: 24px;
-    }
-}
-
-@media (max-width: 500px) {
-
-    body {
-        padding: 15px;
+    .score span {
+        font-size: 58px;
     }
 
-    .header {
+    .score small {
+        font-size: 28px;
+    }
+
+    .parameter-card h2,
+    .membership-section h2,
+    .comfort-section h2 {
+        font-size: 23px;
+    }
+
+    .information {
+        min-height: 150px;
         padding: 20px;
     }
 
-    .header-icon {
-        font-size: 35px;
+    .information-content strong {
+        font-size: 25px;
     }
 
-    .header h1 {
-        font-size: 21px;
+    .information-content p {
+        font-size: 18px;
+    }
+
+    .illustration {
+        width: 340px;
+        height: 300px;
+    }
+
+    .comfort-svg {
+        width: 340px;
+        height: 300px;
+    }
+
+    .illustration-card p {
+        font-size: 22px;
     }
 }
